@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 options = webdriver.ChromeOptions()
-options.add_argument("--window-size=1920,1080")  # Явный размер окна
+options.add_argument("--window-size=1920,1080")
 
 
 driver = webdriver.Chrome(
@@ -15,7 +15,7 @@ driver = webdriver.Chrome(
 driver.get("http://uitestingplayground.com/textinput")
 
 input_field = driver.find_element(By.CSS_SELECTOR, "#newButtonName")
-input_field.clear()  # Очищаем поле
+input_field.clear()
 input_field.send_keys("SkyPro")
 
 button = driver.find_element(By.CSS_SELECTOR, "#updatingButton")

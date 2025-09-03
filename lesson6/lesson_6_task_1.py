@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 options = webdriver.ChromeOptions()
-options.add_argument("--window-size=1920,1080")  # Явный размер окна
+options.add_argument("--window-size=1920,1080")
 
 
 driver = webdriver.Chrome(

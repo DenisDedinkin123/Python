@@ -32,7 +32,7 @@ def api_client():
         client.delete_api_key(client._api_key)
 
 
-# Cоздание временного проекта
+# создание временного проекта
 @pytest.fixture
 def project_id(api_client):
     # Создаем временный проект для тестов
@@ -63,7 +63,7 @@ def test_get_api_key(api_client):
     assert len(api_client._api_key) > 0
 
 
-# Cоздать новый проект
+# создать новый проект
 @pytest.mark.positive
 def test_create_project_positive(api_client):
     project_title = "Новый проект " + fake.word()

@@ -15,7 +15,7 @@ PASSWORD = "secret_sauce"
 FIRST_NAME = "Denis"
 LAST_NAME = "Dedinkin"
 ZIP_CODE = "302023"
-EXPECTED_TOTAL = "$58.29"
+EXPECTED_TOTAL = 58.29
 ITEMS_TO_ADD = [
     "add-to-cart-sauce-labs-backpack",
     "add-to-cart-sauce-labs-bolt-t-shirt",

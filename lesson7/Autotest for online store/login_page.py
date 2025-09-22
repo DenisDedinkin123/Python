@@ -1,19 +1,24 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-
-# Авторизация
 class LoginPage:
-    def __init__(self, driver: WebDriver):
+    def __init__(self, driver):
         self.driver = driver
         self.url = "https://www.saucedemo.com/"
 
     def open(self):
         self.driver.get(self.url)
 
-    def login(self, username: str, password: str):
-        self.driver.find_element(
-            By.CSS_SELECTOR, "#user-name").send_keys(username)
-        self.driver.find_element(
-            By.CSS_SELECTOR, "#password").send_keys(password)
-        self.driver.find_element(By.CSS_SELECTOR, "#login-button").click()
+    def login(self, username, password):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.ID, "user-name"))
+        ).send_keys(username)
+
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.ID, "password"))
+        ).send_keys(password)
+
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.ID, "login-button"))
+        ).click()

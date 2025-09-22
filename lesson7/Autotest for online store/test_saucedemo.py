@@ -11,8 +11,8 @@ from checkout_overview_page import CheckoutOverviewPage
 # Данные для теста
 USERNAME = "standard_user"
 PASSWORD = "secret_sauce"
-FIRST_NAME = "Sergey"
-LAST_NAME = "Latynin"
+FIRST_NAME = "Denis"
+LAST_NAME = "Dedinkin"
 ZIP_CODE = "302023"
 EXPECTED_TOTAL = 58.29  # числовое значение
 ITEMS_TO_ADD = [
